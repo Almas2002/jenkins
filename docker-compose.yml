@@ -8,5 +8,14 @@ services:
       - 8099:8080
     volumes:
      - jenkins:/var/jenkins_home
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf.prod:/etc/nginx/conf.d/nginx.conf
+    depends_on:
+      - api
 volumes:
      jenkins:
