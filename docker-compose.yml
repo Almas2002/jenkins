@@ -2,7 +2,7 @@ version: '3.9'
 services:
   jenkins:
     restart: on-failure:10
-    image: jenkins/jenkins:latest
+    image: jenkins/jenkins:2.319.2-jdk11
     container_name: jenkins
     ports:
       - 8099:8080
