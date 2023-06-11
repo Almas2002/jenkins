@@ -1,6 +1,6 @@
 server{
   listen 80;
-  server_name 164.92.204.107;
+  server_name 46.101.148.247;
   location / {
     proxy_pass http://jenkins:8099;
   }
